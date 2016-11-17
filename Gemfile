@@ -7,6 +7,7 @@ gem "rails", "5.0.0.1"
 gem "pg"
 gem "puma"
 
+gem "uglifier"
 gem "slim-rails"
 
 group :development do
