@@ -21,8 +21,6 @@ Berksfile.lock
 cookbooks
 
 .env
-config/secrets.yml
-config/database.yml
 
 dragonfly.log
 /public/system

@@ -9,6 +9,7 @@ gem "puma"
 
 gem "uglifier"
 gem "slim-rails"
+gem "therubyracer", platforms: :ruby
 
 group :development do
   gem "listen"
