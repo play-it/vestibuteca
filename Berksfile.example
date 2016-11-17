@@ -1,0 +1,12 @@
+source "https://api.berkshelf.com"
+
+cookbook "apt"
+cookbook "build-essential"
+cookbook "ffi",               git: "git://github.com/tdtadeu/ffi.git"
+cookbook "postgresql",        git: "git://github.com/tdtadeu/postgresql.git"
+cookbook "git",               git: "git://github.com/tdtadeu/git.git"
+cookbook "timezone",          git: "git://github.com/winhamwr/chef-timezone.git"
+cookbook "oh_my_zsh",         git: "git://github.com/tdtadeu/oh-my-zsh-chef.git"
+cookbook "bundle",            git: "git://github.com/tdtadeu/bundle.git"
+cookbook "brightbox",         git: "git://github.com/luzvc/brightbox.git"
+cookbook "locale"
