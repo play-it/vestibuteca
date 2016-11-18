@@ -1,0 +1,1 @@
+class ImageAttachment < Attachment; end
