@@ -1,0 +1,9 @@
+machine:
+  timezone:
+    America/Sao_Paulo
+  ruby:
+    version: 2.3.1
+
+dependencies:
+  bundler:
+    without: [production]

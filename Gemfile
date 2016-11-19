@@ -20,8 +20,11 @@ end
 
 group :development, :test do
   gem "rubocop", require: false
+  gem "shoulda-matchers"
 end
 
 group :test do
   gem "rspec-rails"
+  gem "factory_girl_rails"
+  gem "simplecov"
 end
