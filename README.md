@@ -63,13 +63,13 @@ In the virtual machine, run:
     $ bundle exec rake db:create db:migrate
     $ bundle exec rake db:create db:migrate RACK_ENV=test
 
-## Run the tests
+### 4. Run the tests
 
 Run the tests to check if everything is working:
 
     $ bundle exec rspec
 
-## Run the server
+### 5. Run the server
 
 Run:
 
