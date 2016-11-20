@@ -1,6 +1,6 @@
 # Vestibuteca
 
-[ ![Codeship Status for play-it/vestibuteca](https://app.codeship.com/projects/176b8f90-9103-0134-be61-6ae3641f140d/status?branch=master)](https://app.codeship.com/projects/185831)
+[![CircleCI](https://circleci.com/gh/play-it/vestibuteca.svg?style=svg)](https://circleci.com/gh/play-it/vestibuteca)
 
 Vestibuteca is a collection of questions from college entrance exams. Currently supported exams are:
 * ENEM
