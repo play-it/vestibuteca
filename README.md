@@ -25,7 +25,7 @@ The following steps are not required to be made for contribute to the project, a
     ```
 
   5. Install the nfs server:
-  
+
     ```
     $ sudo apt-get install nfs-kernel-server
     ```
@@ -55,21 +55,30 @@ In the virtual machine, run:
 
     $ bundle install
 
-### 3. Database setup
+
+### 3. Environment setup
+
+In the virtual machine run:
+
+    $ cp .env.example .env
+    $ bundle exec rake secret
+
+Replace the `secret` in the `.env` file with the value returned by the last command.
+
+### 4. Database setup
 
 In the virtual machine, run:
 
-    $ cp config/database.example.yml config/database.yml
     $ bundle exec rake db:create db:migrate
     $ bundle exec rake db:create db:migrate RACK_ENV=test
 
-### 4. Run the tests
+### 5. Run the tests
 
 Run the tests to check if everything is working:
 
     $ bundle exec rspec
 
-### 5. Run the server
+### 6. Run the server
 
 Run:
 
@@ -80,4 +89,3 @@ to start the server.
 Check that it is working by opening a browser in the host machine and pointing it to [http://localhost:3000].
 
 [http://localhost:3000]: http://localhost:3000
-
