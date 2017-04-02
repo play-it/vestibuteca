@@ -1,0 +1,4 @@
+project=vestibuteca
+architecture=container
+test=minitest
+template=erb
