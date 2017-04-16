@@ -1,7 +1,6 @@
-# This is the default configuration file. Enabling and disabling is configured
-# in separate files. This file adds all other parameters apart from Enabled.
+Documentation:
+  Enabled: false
 
-# Common configuration.
 AllCops:
   # Include common Ruby source files.
   Include:
@@ -29,7 +28,6 @@ AllCops:
     - '**/buildfile'
     - '**/config.ru'
     - '**/Appraisals'
-    - '**/Berksfile'
     - '**/Brewfile'
     - '**/Buildfile'
     - '**/Capfile'
@@ -48,9 +46,12 @@ AllCops:
     - '**/Snapfile'
     - '**/Thorfile'
     - '**/Vagabondfile'
-    - '**/Vagrantfile'
   Exclude:
     - 'vendor/**/*'
+    - "cookbooks/**/*"
+    - "**/Berksfile"
+    - "**/Vagrantfile"
+
   # Default formatter will be used if no `-f/--format` option is given.
   DefaultFormatter: progress
   # Cop names are not displayed in offense messages by default. Change behavior
@@ -433,8 +434,7 @@ Style/ConditionalAssignment:
 #   AutocorrectNotice: '# Copyright (c) 2015 Yahoo! Inc.'
 #
 Style/Copyright:
-  Notice: '^Copyright (\(c\) )?2[0-9]{3} .+'
-  AutocorrectNotice: ''
+  Enabled: false
 
 Style/DocumentationMethod:
   RequireForNonPublicMethods: false
@@ -1125,7 +1125,7 @@ Style/StabbyLambdaParentheses:
     - require_no_parentheses
 
 Style/StringLiterals:
-  EnforcedStyle: single_quotes
+  EnforcedStyle: double_quotes
   SupportedStyles:
     - single_quotes
     - double_quotes
@@ -1134,7 +1134,7 @@ Style/StringLiterals:
   ConsistentQuotesInMultiline: false
 
 Style/StringLiteralsInInterpolation:
-  EnforcedStyle: single_quotes
+  EnforcedStyle: double_quotes
   SupportedStyles:
     - single_quotes
     - double_quotes
@@ -1151,7 +1151,6 @@ Style/StringMethods:
 
 Style/SymbolArray:
   EnforcedStyle: percent
-  MinSize: 0
   SupportedStyles:
     - percent
     - brackets

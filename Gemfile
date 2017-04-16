@@ -2,9 +2,9 @@ source "https://rubygems.org"
 ruby "2.4.0"
 
 gem "bundler"
-gem "rake"
 gem "hanami"
 gem "hanami-model"
+gem "rake"
 
 gem "pg"
 
@@ -23,8 +23,8 @@ group :test, :development do
 end
 
 group :test do
-  gem "rspec"
   gem "capybara"
+  gem "rspec"
   gem "simplecov"
 end
 
