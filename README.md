@@ -20,28 +20,28 @@ The following steps are not required to be made for contribute to the project, a
   3. Install [ChefDK](https://downloads.chef.io/chef-dk/)
   4. Install [vagrant-omnibus](https://github.com/chef/vagrant-omnibus):
 
-    ```
-    $ vagrant plugin install vagrant-omnibus
-    ```
+  ```
+  $ vagrant plugin install vagrant-omnibus
+  ```
 
   5. Install the nfs server:
 
-    ```
-    $ sudo apt-get install nfs-kernel-server
-    ```
+  ```
+  $ sudo apt-get install nfs-kernel-server
+  ```
 
   6. Clone the project with `git clone`
   7. `cd` into the project folder and run:
 
-    ```
-    $ berks vendor cookbooks
-    ```
+  ```
+  $ berks vendor cookbooks
+  ```
 
   8. Bring the VM up (it's gonna take a while):
 
-    ```
-    $ vagrant up
-    ```
+  ```
+  $ vagrant up
+  ```
 
 Virtual machine should be up and running.
 
@@ -60,17 +60,21 @@ In the virtual machine, run:
 
 In the virtual machine run:
 
-    $ cp .env.example .env
-    $ bundle exec rake secret
+    $ cp .env.example .env.development
+    $ cp .env.example .env.test
 
-Replace the `secret` in the `.env` file with the value returned by the last command.
+Next, generate two random secrets to use on session store:
+
+    $ ruby -rsecurerandom -e "puts SecureRandom.hex(64)"
+
+Replace the `secret` value on the `WEB_SESSIONS_SECRET` variable in the `.env` files with the value returned by the last command.
 
 ### 4. Database setup
 
 In the virtual machine, run:
 
-    $ bundle exec rake db:create db:migrate
-    $ bundle exec rake db:create db:migrate RACK_ENV=test
+    $ bundle exec hanami db prepare
+    $ HANAMI_ENV=test bundle exec hanami db prepare
 
 ### 5. Run the tests
 
@@ -82,7 +86,7 @@ Run the tests to check if everything is working:
 
 Run:
 
-    bundle exec foreman start
+    bundle exec hanami server --host=0.0.0.0 --port=3000
 
 to start the server.
 
