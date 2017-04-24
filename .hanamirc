@@ -1,4 +1,4 @@
 project=vestibuteca
 architecture=container
-test=minitest
+test=rspec
 template=erb

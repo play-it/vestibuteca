@@ -8,16 +8,6 @@ Hanami.configure do
   mount Web::Application, at: "/"
 
   model do
-    ##
-    # Database adapter
-    #
-    # Available options:
-    #
-    #  * SQL adapter
-    #    adapter :sql, 'sqlite://db/vestibuteca_development.sqlite3'
-    #    adapter :sql, 'postgres://localhost/vestibuteca_development'
-    #    adapter :sql, 'mysql://localhost/vestibuteca_development'
-    #
     adapter :sql, ENV["DATABASE_URL"]
 
     ##
