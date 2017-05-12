@@ -20,8 +20,7 @@ Berksfile
 Berksfile.lock
 cookbooks
 
-.env.development
-.env.test
+.env
 
 dragonfly.log
 /public/system

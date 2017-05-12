@@ -1,4 +1,0 @@
-project=vestibuteca
-architecture=container
-test=rspec
-template=erb
