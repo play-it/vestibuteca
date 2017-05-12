@@ -1,33 +1,30 @@
 source "https://rubygems.org"
+
 ruby "2.4.0"
 
-gem "bundler"
-gem "hanami"
-gem "hanami-model"
-gem "rake"
+gem "rails"
 
 gem "pg"
+gem "puma"
+
+gem "dotenv-rails", require: "dotenv/rails-now"
+gem "foreman"
+
+gem "slim-rails"
+gem "therubyracer", platforms: :ruby
+gem "uglifier"
 
 group :development do
-  # Code reloading
-  # See: http://hanamirb.org/guides/projects/code-reloading
-  gem "shotgun"
+  gem "listen"
 end
 
-group :test, :development do
-  gem "dotenv"
-  gem "pry"
-  gem "pry-byebug"
-  gem "rubocop"
+group :development, :test do
+  gem "rubocop", require: false
   gem "shoulda-matchers"
 end
 
 group :test do
-  gem "capybara"
-  gem "rspec"
+  gem "factory_girl_rails"
+  gem "rspec-rails"
   gem "simplecov"
-end
-
-group :production do
-  # gem "puma"
 end
