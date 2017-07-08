@@ -10,6 +10,7 @@ gem "puma"
 gem "dotenv-rails", require: "dotenv/rails-now"
 gem "foreman"
 
+gem "dragonfly"
 gem "slim-rails"
 gem "therubyracer", platforms: :ruby
 gem "uglifier"
