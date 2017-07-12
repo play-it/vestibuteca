@@ -11,12 +11,16 @@ gem "dotenv-rails", require: "dotenv/rails-now"
 gem "foreman"
 
 gem "dragonfly"
+gem "simple_form"
 gem "slim-rails"
+gem "sorcery"
 gem "therubyracer", platforms: :ruby
 gem "uglifier"
 
 group :development do
   gem "listen"
+  gem "pry"
+  gem "pry-byebug"
 end
 
 group :development, :test do
