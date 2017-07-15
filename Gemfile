@@ -15,8 +15,12 @@ gem "slim-rails"
 gem "therubyracer", platforms: :ruby
 gem "uglifier"
 
+gem "omniauth-slack"
+
 group :development do
   gem "listen"
+  gem "pry"
+  gem "pry-byebug"
 end
 
 group :development, :test do

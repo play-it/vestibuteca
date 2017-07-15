@@ -14,11 +14,17 @@ Bundler.require(*Rails.groups)
 
 module Vestibuteca
   class Application < Rails::Application
-    # Settings in config/environments/* take precedence over those specified
-    # here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
-
     config.time_zone = "Brasilia"
+
+    config.middleware.use OmniAuth::Builder do
+      configure { |c| c.path_prefix = "/admin" }
+
+      provider :slack,
+        ENV["SLACK_ID"],
+        ENV["SLACK_SECRET"],
+        name: "sessions",
+        scope: "team:read,users:read,identify",
+        team: ENV["SLACK_TEAM_ID"]
+    end
   end
 end
